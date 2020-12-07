@@ -177,6 +177,10 @@ DocumentUniqueId=CZPBNAVC
 DocumentPath=Project Outputs for CCZynq\BGA Escape Route - CCZynq.html
 DItemRevisionGUID=
 
+[GeneratedDocument2]
+DocumentPath=Project Outputs for CCZynq\Design Rule Check - CCZynq.html
+DItemRevisionGUID=
+
 [Configuration1]
 Name=Sources
 ParameterCount=0
