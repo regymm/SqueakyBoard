@@ -1,4 +1,5 @@
-History/
-Project Logs for CCZynq/
-*.zip
-*.OutJob
+altium/History/
+altium/Project Logs for CCZynq/
+altium/*.zip
+altium/*.OutJob
+*.xlsx
