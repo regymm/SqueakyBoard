@@ -79,6 +79,10 @@ Be sure to follow the [noddr procedure](https://xilinx-wiki.atlassian.net/wiki/s
 
 ![](pic/ila.png)
 
+#### About the name
+
+https://nethackwiki.com/wiki/Trap#Squeaky_board
+
 #### Reference
 
 - Mainly UG933, some UG483 and UG585
