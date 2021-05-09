@@ -27,23 +27,22 @@
 
 Untested parts: 
 
-- CH375b
 - W5500 module
 - 5V jack input
 - SD card only SPI is tested
-- PSRAM only the first(U4), SPI mode is tested
+- PSRAM only the first(U4), up to QPI mode 62.5MHz -- this is because laziness
 - USB only PS2 keyboard tested
-- Use 7020 instead of 7010
+- Use 7020 instead of 7010 -- is power supply sufficient?
 
 Parts need remedy: 
 
-- Slide switch need VCC connection removed to avoid short
-- USB(direct connection) needs pullup constraint because logic level problem(FPGA 3.3V vs PS2 5V), but it do work for some keyboards
+- Slide switch need VCC connection removed to avoid short -- it's more bad switch than bad design
+- USB(direct connection) needs pullup constraint because logic level problem(FPGA 3.3V vs PS2 5V), but it do work for some (extremely cheap) keyboards
 - The crystal on front side connected to a pin with warning, so is not used
 
 Failed parts: 
 
-- USB to UART
+- USB to UART -- D- and D+ on the chip was accidentally inverted
 
 #### Design Files
 
@@ -61,8 +60,8 @@ Be sure to follow the [noddr procedure](https://xilinx-wiki.atlassian.net/wiki/s
 - My testings are not sufficient
 - No DDR or PS-side IO so the ARM cores are literally useless except booting from QSPI flash
 - Using ingenuine JTAG downloader may have legal issue
-- Electrostatic discharge should be taken care of
-- Contains lead
+- Electrostatic discharge should be taken care of -- it already has SMAJ5.0CA but who knows?
+- Contains lead(Pb)
 - It's a 4-layer so all common PCB design rules are put aside, signal integrity compromised 
 
 #### Gallery
