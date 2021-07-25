@@ -11,14 +11,15 @@
 
 #### Connectivity
 
-- Pluggable CJMCU-FT232HL as JTAG downloader, and standard 2x7 JTAG port
+- Pluggable CJMCU-FT232HL as JTAG downloader or USB-UART bridge
+- Reserved standard 2x7 JTAG port
 - SPI PSRAM up to 64 MBytes
 - Basic HDMI
 - ~~USB-to-UART~~
 - Two USB ports, one connected directly and one via CH375b
 - Micro SD Card
 - Pluggable W5500-Lite module
-- Up to 4 PMOD interface
+- Up to 4 PMOD connector
 - 4 LEDs, 2 slide switches, 2 push buttons
 - Configuration via PS-side QSPI flash
 - Power input via JTAG downloader, USB-to-UART, or 5V jack 
@@ -27,11 +28,10 @@
 
 Untested parts: 
 
-- W5500 module
 - 5V jack input
 - SD card only SPI is tested
 - PSRAM only the first(U4), up to QPI mode 62.5MHz -- this is because laziness
-- USB only PS2 keyboard tested
+- USB direct connect only PS2 keyboard tested
 - Use 7020 instead of 7010 -- is power supply sufficient?
 
 Parts need remedy: 
@@ -47,8 +47,6 @@ Failed parts:
 #### Design Files
 
 Sorry but I use Altium Designer. altium/ contains design files, altium_pdf/ contains readable schematic(with comment of failed parts) and layout. 
-
-#### Development Files
 
 src/ contains example project source, bitstream, pre-generated SPI flash content, and xdc file. 
 
@@ -68,6 +66,10 @@ Be sure to follow the [noddr procedure](https://xilinx-wiki.atlassian.net/wiki/s
 
 - Front view
 
+  *with [ymmcu-ft2232](https://github.com/ustcpetergu/ymmcu-ft2232) and w5500-lite, thanks [USTCLUG](https://github.com/ustclug/) for the sticker*
+
+![](pic/squeaky_front_new.png)
+
 ![](pic/squeaky_front.jpg)
 
 - Back view
@@ -78,12 +80,17 @@ Be sure to follow the [noddr procedure](https://xilinx-wiki.atlassian.net/wiki/s
 
 ![](pic/ila.png)
 
-#### About the name
+#### Misc. 
+
+**About the name**
 
 https://nethackwiki.com/wiki/Trap#Squeaky_board
 
-#### Reference
+**Reference**
 
 - Mainly UG933, some UG483 and UG585
 - Testing files from Digilent and fpga4fun
 
+**Cooperation**
+
+I made one batch(5 pcs), 4 are soldered and 1 is left abandoned. Among the 4, 1 was sold, 1 was given to friend, and 2 are in my hands. If anyone want to make the board again using the PCB files, **please contact me**. I'll fix the UART bug, export Gerber if needed, and maybe mail you my excess components. 
